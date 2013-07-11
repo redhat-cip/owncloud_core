@@ -74,6 +74,7 @@ OC.Settings.Apps = OC.Settings.Apps || {
 			$.post(OC.filePath('settings','ajax','enableapp.php'),{appid:appid},function(result) {
 				if(!result || result.status!='success') {
 					OC.dialogs.alert(result.data.message, t('core', 'Error'));
+					element.val(t('settings','Enable'));
 				}
 				else {
 					OC.Settings.Apps.addNavigation(appid);
