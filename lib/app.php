@@ -239,7 +239,7 @@ class OC_App{
 					.' not compatible with this version of ownCloud',
 					OC_Log::ERROR);
 				return array($l->t("App can't be installed because it is not compatible with this version of ownCloud."));
-			} else if (isset($info['dependencies']) && !self::appDependencycheck($info['dependencies'])) { // Check if dependecies are installed
+			} else if (isset($info['dependencies']) && !self::appDependencyCheck($info['dependencies'])) { // Check if dependecies are installed
 				OC_Log::write('core',
 					'App "'.$info['name'].'" can not be installed because it is'
 					. ' missing dependencies',
